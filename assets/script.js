@@ -16,7 +16,7 @@ crossBar.addEventListener('click', function() {
     navColumn.style.left = '100%';
 });
 
-/*  */
+/* clicking on anywhere expect the navbar will close it */
 
 document.addEventListener('click', function(event) {
 
@@ -26,3 +26,11 @@ document.addEventListener('click', function(event) {
         navColumn.style.left = '100%';
     }
 });
+
+
+
+
+
+
+
+
