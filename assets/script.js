@@ -28,6 +28,22 @@ document.addEventListener('click', function(event) {
 });
 
 
+/* Switch to dark mode */
+
+const sun = document.querySelector('.fa-sun');
+const moon = document.querySelector('.fa-moon');
+
+sun.addEventListener('click', function() {
+    sun.style.display = 'none';
+    moon.style.display = 'block';
+    document.body.classList.toggle('dark-mode');
+})
+
+moon.addEventListener('click', function() {
+    moon.style.display = 'none';
+    sun.style.display = 'block';
+    document.body.classList.toggle('dark-mode');
+})
 
 
 
