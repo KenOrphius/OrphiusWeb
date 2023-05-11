@@ -59,7 +59,7 @@ html { scroll-behavior: smooth; }
     --NAV-COLOR: #191627;
     --CARD-COLOR: #f7f3f0;
     --FONT-COLOR: #f1f5f9;
-    --ALT-FONT-COLOR: #f7f3f0;
+    --ALT-FONT-COLOR: #070a13;
     --BUTTON-COLOR: #ae00ff;
     --HOVER-BUTTON-COLOR: #9509d6;
 }
@@ -347,13 +347,15 @@ hr {
 }
 
 .card {
-    width: min(100%, 350px);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: min(90%, 360px);
     padding: 2rem;
     border: 2px solid white;
     background-color: var(--CARD-COLOR);
     color: var(--ALT-FONT-COLOR);
     border-radius: 20px;
-    text-align: center;
     margin-bottom: 40px;
     box-shadow: 5px 8px 10px black;
 }
@@ -482,7 +484,7 @@ footer div {
     }
 
     .title {
-        font-size: 31px;
+        font-size: 27px;
         padding-right: 10px;
         margin-left: 10px;
     
@@ -595,7 +597,6 @@ footer div {
 
     .card {
         width: min(100%, 550px);
-        height: 700px;
         padding: 3rem;
         margin-bottom: 50px;
     }
