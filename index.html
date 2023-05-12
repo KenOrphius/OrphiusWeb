@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Orphius</title>
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <section class="upper-body">
@@ -49,19 +50,19 @@
         </header>
         <div class="introduction">
             <p>Hey, I'm <span> KENNETH</span></p>
-            <blockquote class="quote">&#10077; I will make an awesome website for you &#10078;</blockquote>
+            <blockquote class="quote">&#10077;  I will make an awesome website for you &#10078;</blockquote>
             <a class="direct-btn" href="#contact"><button>Contact Me</button></a>
         </div>
     </section>
     <main>
         <section class="details">
-                <h3 class="h3-heading"
-                id="about">About Me</h3>
-                <article class="about">
-                    <img src="img/profile_pic_holder.jpg" alt="profile picture" height="300" width="250px">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ad molestiae dicta necessitatibus delectus vel labore velit dignissimos dolores odio in cum quaerat nihil optio expedita architecto, nemo rem consectetur.
-                    Ex inventore ea nemo a molestias nesciunt, reiciendis quidem ratione voluptas accusamus doloremque? Perferendis neque, placeat tempore possimus impedit aperiam? Temporibus cumque obcaecati minus ea optio distinctio natus pariatur praesentium.
-                    </p>
+            <h3 class="h3-heading"
+            id="about">About Me</h3>
+            <article class="about">
+                <img src="img/1677606379431_crop.png" alt="profile picture" height="340" width="250px">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ad molestiae dicta necessitatibus delectus vel labore velit dignissimos dolores odio in cum quaerat nihil optio expedita architecto, nemo rem consectetur.
+                Ex inventore ea nemo a molestias nesciunt, reiciendis quidem ratione voluptas accusamus doloremque? Perferendis neque, placeat tempore possimus impedit aperiam? Temporibus cumque obcaecati minus ea optio distinctio natus pariatur praesentium.
+                </p>
             </article>
             <hr>
             <article class="experience">
@@ -79,14 +80,13 @@
                         <p>EXPERIENCE 3</p>
                         <img class="last-img" src="img/placeholder.png" alt="" height="300">
                     </div>
-                </div>
-                
+                </div> 
             </article>
             <hr>
             <h3 class="h3-heading service-heading" id="services">Services</h3>
             <article class="services">
                 <div class="card">
-                    <img src="img/placeholder.png" alt="" height="300">
+                    <img src="img/pexels-pixabay-39284.jpg" alt="" height="300">
                     <figcaption>Web Designing</figcaption>
                     <p><q>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, consectetur aspernatur? Quod ut dolorem ipsam reiciendis optio, doloremque nihil debitis ad molestiae inventore, beatae incidunt quibusdam vel amet, adipisci vero.</q></p>
                 </div>
@@ -94,22 +94,21 @@
             <hr>
             <article class="contact" id="contact">
                 <h3 class="h3-heading">Contact Me</h3>
-                <div class="contact-box">
+                <form class="contact-box" id="submit-form" action="">
                     <div class="contact-infos">
-                        <label>Name</label>
-                        <input class="input-box" type="text" placeholder="Enter Your Name">
+                        <label for="fname">Name</label>
+                        <input class="input-box" id="fname" name="name" type="text" placeholder="Your Name" required>
                     </div>
                     <div class="contact-infos">
-                        <label>Email</label>
-                        <input class="input-box" type="email" placeholder="Enter Your Email">
+                        <label for="fname">Email</label>
+                        <input id="fname" name="email" class="input-box" type="email" placeholder="Your Email" required>
                     </div>
                     <div class="contact-infos">
-                        <label>Message</label>
-                        <textarea class="input-box input-msg" placeholder="Your Message"></textarea>
+                        <label for="subject" >Message</label>
+                        <textarea id="subject" name="message" class="input-box input-msg" rows="4" placeholder="Your Message"></textarea>
                     </div>
                     <button class="send-button">SEND <i class="fa-solid fa-paper-plane"></i></button>
-                </div>
-                
+                </form>
             </article>
         </section>
     </main>
@@ -127,6 +126,25 @@
     </footer>
     <script src="https://kit.fontawesome.com/b313394df8.js" crossorigin="anonymous"></script>
     <script src="assets/script.js"></script>
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbw8X_6pvkei8jwLvGgmZsFI_-k5XG3B0SNSa_NKXBvFucZMFd-FixrDOm_fRevgATd5/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Thank you for your response. I will contact you soon.")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Seems like an error has occured. Please try again.")
+    
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
