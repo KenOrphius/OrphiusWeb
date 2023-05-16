@@ -333,8 +333,8 @@ hr {
 .about p {
     flex-wrap: wrap;
     padding-top: 20px;
-    width: 70%;
     padding-bottom: 50px;
+    width: 90%;
 }
 
 /* Experience content */
