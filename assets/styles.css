@@ -41,6 +41,8 @@ html { scroll-behavior: smooth; }
     --HOVER-BUTTON-COLOR: #edcb0a;
     --INPUT-BOX-COLOR: #f1f5f9;
     --BORDER-COLOR: #f1f5f9;
+    --BODY-COLOR-1: #dfd9d7;
+    --BODY-COLOR-2: #f1f5f9;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -71,13 +73,15 @@ html { scroll-behavior: smooth; }
     --BUTTON-COLOR: #ae00ff;
     --HOVER-BUTTON-COLOR: #9509d6;
     --BORDER-COLOR: #070a13;
+    --BODY-COLOR-1: #f1f5f9;
+    --BODY-COLOR-2: #070a13;
 }
 
 /* mobile version - <767px */
 
 .upper-body {
     height: 600px;
-    background-image: radial-gradient( #f7f3f0 5%, var(--BG-COLOR));
+    background-image: radial-gradient( var(--BODY-COLOR-1) 1%, var(--BODY-COLOR-2));
     /* background-image: url(../img/pexels-gabriel-peter-696680-1.png);
     background-size: cover;
     background-repeat: no-repeat; */
@@ -307,7 +311,7 @@ html { scroll-behavior: smooth; }
 /* About content */
 .about {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
@@ -323,13 +327,13 @@ hr {
 
 .about img {
     padding-top: 40px;
-    height: 250px;
+    height: 350px;
 }
 
 .about p {
     flex-wrap: wrap;
     padding-top: 20px;
-    width: 80%;
+    width: 70%;
     padding-bottom: 50px;
 }
 
@@ -464,11 +468,14 @@ footer {
     align-items: center;
 }
 
+.top-footer {
+    font-size: 10px;
+}
+
 footer div {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    align-items: baseline;
     padding-bottom: 20px;
 
 }
@@ -481,12 +488,21 @@ footer div {
     color: #f1f5f9;
 }
 
+.footer-email-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 25px;
+    color: #f1f5f9;
+}
+
 .fa-brands {
     cursor: pointer;
 }
 
 .copyright {
-    font-size: 14px;
+    font-size: 10px;
     margin-bottom: 30px;
     color: #f1f5f9;
 }
@@ -664,6 +680,10 @@ footer div {
         padding-top: 30px;
     }
 
+    .footer-email-phone {
+        font-size: 15px;
+    }
+
     .copyright {
         font-size: 20px;
     }
@@ -715,9 +735,20 @@ footer div {
 
     /* About content */
 
+    .about {
+        width: 80%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        text-align: start;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        gap: 20px;
+    }
+
     .about img {
         padding-top: 0px;
-        margin-right: 100px;
+        margin-right: 120px;
         height: 450px;
         width: 500px;
     }
@@ -742,5 +773,9 @@ footer div {
     
     }
 
-    
+    /* footer */
+
+    .footer-email-phone {
+        font-size: 18px;
+    }
 }
