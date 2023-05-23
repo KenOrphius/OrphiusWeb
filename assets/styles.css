@@ -80,11 +80,12 @@ html { scroll-behavior: smooth; }
 /* mobile version - <767px */
 
 .upper-body {
-    height: 600px;
-    background-image: radial-gradient( var(--BODY-COLOR-1) 1%, var(--BODY-COLOR-2));
-    /* background-image: url(../img/pexels-gabriel-peter-696680-1.png);
+    /* background-image: radial-gradient( var(--BODY-COLOR-1) 1%, var(--BODY-COLOR-2)); */
+    background-image: url(../img/imageA.jpg);
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-attachment: fixed;
+    /* background-size: 100% 1000px; */
+    background-repeat: no-repeat;
 }
 
 /* upper bar */
