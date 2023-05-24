@@ -4,7 +4,7 @@ const navColumn = document.getElementById('nav-column-id');
 const menuBar = document.getElementById('menu-bar-id');
 const crossBar = document.getElementById('cross-bar-id')
 
-/* 'display:block' on clicking menubar */
+/* position on clicking menubar */
 
 menuBar.addEventListener('click', function() {
 
@@ -15,6 +15,19 @@ crossBar.addEventListener('click', function() {
     
     navColumn.style.left = '100%';
 });
+
+/* Reveal the menu bar on scrolling */
+
+window.addEventListener('scroll', function() {
+    var navigation = document.querySelector('.navigation');
+    var upperBody = document.querySelector('.upper-body');
+    
+    if (window.scrollY > upperBody.offsetTop) {
+      navigation.classList.add('scrolled');
+    } else {
+      navigation.classList.remove('scrolled');
+    }
+  });
 
 /* clicking on anywhere expect the navbar will close it */
 
